@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".presenter.product_details_screen.ProductDetailsFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/c_v_image_detail"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@color/white"
+        android:paddingTop="10dp"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/i_v_image_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/c_v_image_detail"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/c_l_detail_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="20dp">
+
+            <TextView
+                android:id="@+id/t_v_title_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="iPhone"
+                android:textColor="@color/black"
+                android:textFontWeight="700"
+                android:textSize="24px"
+                android:paddingStart="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/appCompatImageViewLike"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/black"
+                android:src="@drawable/ic_favorite"
+                android:layout_marginEnd="20dp"
+                app:circularflow_radiusInDP="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                android:id="@+id/l_l_stars"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:paddingStart="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/t_v_title_details">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_star_rate_24" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_star_rate_24" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_star_rate_24" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_star_rate_24" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_star_rate_24" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_star_rate_24" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:tabTextColor="@color/black"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        tools:ignore="MissingConstraints"
+        android:focusable="true">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shop"
+            android:focusedByDefault="true"
+            android:defaultFocusHighlightEnabled="true"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/details" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/features" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+<LinearLayout
+    android:id="@+id/l_l_set_images"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/i_v_processor"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_processor"
+            />
+        <TextView
+            android:id="@+id/t_v_processor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exynos 990"
+            android:textSize="20px"
+            android:textColor="#B7B7B7"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/i_v_photo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_photo"
+            />
+        <TextView
+            android:id="@+id/t_v_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="photo"
+            android:textSize="20px"
+            android:textColor="#B7B7B7"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/i_v_flash"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_flash"
+            />
+        <TextView
+            android:id="@+id/t_v_flash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="photo"
+            android:textSize="20px"
+            android:textColor="#B7B7B7"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/i_v_sim"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_sim_card"
+            />
+        <TextView
+            android:id="@+id/t_v_sim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sim"
+            android:textSize="20px"
+            android:textColor="#B7B7B7"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select color and capacity"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:paddingStart="40dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingStart="30dp"
+                    android:paddingTop="30dp">
+
+                    <ImageButton
+                        android:id="@+id/i_v_first"
+                        android:focusedByDefault="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"/>
+
+                    <ImageButton
+                        android:id="@+id/i_v_second"
+                        android:clickable="true"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="20dp"
+                        android:focusable="true" />
+
+                    <Button
+                        android:id="@+id/i_v_capacity_first"
+                        android:clickable="true"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="40dp"
+                        android:focusable="true" />
+
+                    <Button
+                        android:id="@+id/i_v_capacity_second"
+                        android:clickable="true"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:focusable="true" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/b_add_to_cart"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/orange"
+        android:text="Add to cart"
+        android:textColor="@color/white"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

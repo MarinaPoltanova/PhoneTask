@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    tools:context=".presenter.cart_screen.CartFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/r_v_cart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/l_l_total_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/l_l_total_text"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:paddingStart="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/l_l_button_checkout"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/t_v_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/t_v_delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivery"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/l_l_total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:orientation="vertical"
+        android:paddingEnd="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/l_l_button_checkout"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/t_v_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$ 6000 us"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/t_v_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Free"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/l_l_button_checkout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/button_checkout"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:background="@color/orange"
+            android:layout_marginStart="50dp"
+            android:gravity="center"
+            android:text="Checkout"
+            android:textColor="@color/white"
+            android:textSize="40px" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
